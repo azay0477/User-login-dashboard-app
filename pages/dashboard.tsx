@@ -5,6 +5,8 @@ import { useSession, signOut } from "next-auth/react";
 import { connect } from "react-redux";
 import { store } from "../store/store";
 import Types from "../store/types";
+import Accordion from "./accordion";
+import CanvasJS from "bootstrap";
 
 const Dashboard = (props: any) => {
   const router = useRouter();
@@ -18,6 +20,37 @@ const Dashboard = (props: any) => {
   useEffect(() => {
     !(session && session.user) && router.push("login");
   }, [session]);
+
+    const styles = {
+      fontFamily: "Roboto",
+      display : "flex"
+    };
+
+
+  //   var chart1 = new CanvasJS.Chart("chartContainer1", {
+  //     title:{
+  //     	text:"Chart 1"
+  //     },  
+  //     data: [
+  //     {
+  //       type: "column",
+  //       dataPoints: [
+  //       { x: 10, y: 71 },
+  //       { x: 20, y: 55},
+  //       { x: 30, y: 50 },
+  //       { x: 40, y: 65 },
+  //       { x: 50, y: 95 },
+  //       { x: 60, y: 68 },
+  //       { x: 70, y: 28 },
+  //       { x: 80, y: 34 },
+  //       { x: 90, y: 14}
+  //       ]
+  //     }
+  //     ]
+  //   });
+  // chart1.render();
+
+  
 
   return (
     <>
@@ -36,6 +69,21 @@ const Dashboard = (props: any) => {
           </h4>
           <p>{props.userDetails?.email}</p>
         </div>
+      </div>
+      <div >
+
+      <div id="collapseOne" className="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div className="panel-body">
+        <div id="chartContainer1" style={{height: "300px", width: "100%"}}>
+        </div>
+      </div>
+    </div>
+
+      <div style={styles}>
+      <Accordion title="Click Me!" content="The Chart" />
+      <Accordion title="Click Me!" content="this is content 2" />
+      <Accordion title="Click Me!" content="this is content 3" />
+    </div>
       </div>
     </>
   );
