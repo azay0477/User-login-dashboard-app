@@ -4,6 +4,8 @@ import { SessionProvider } from "next-auth/react";
 import type { AppProps } from "next/app";
 import { wrapper, store } from "../store/store";
 import { Provider } from "react-redux";
+import "../styles/globals.css";
+
 
 function App({
   Component,
@@ -12,11 +14,17 @@ function App({
   session: Session;
 }>) {
   return (
+    <>
+    
+    <div>
+      <link rel="stylesheet" href="/styles/global.css" />
+    </div>
     <Provider store={store}>
-      <SessionProvider session={pageProps.session}>
-        <Component {...pageProps} />
-      </SessionProvider>
-    </Provider>
+        <SessionProvider session={pageProps.session}>
+          <Component {...pageProps} />
+        </SessionProvider>
+      </Provider>
+      </>
   );
 }
 

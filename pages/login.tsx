@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import { useSession, signIn } from "next-auth/react";
 import { useRouter } from "next/router";
+import "../styles/Home.module.css";
 
 const Login = () => {
   const router = useRouter();
@@ -22,9 +23,9 @@ const Login = () => {
     return <div>Welcome, {session.user.email}</div>;
   } else {
     return (
-      <div>
-        <p>Welcome to User dashboard</p>
-        <button onClick={() => signIn()}>Sign in</button>
+      <div className="dashbaord" >
+        <p className="headerDash">Welcome to User dashboard</p>
+        <button className="signIn" onClick={() => signIn()}>Sign in</button>
       </div>
     );
   }

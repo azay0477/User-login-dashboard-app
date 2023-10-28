@@ -21,10 +21,10 @@ const Dashboard = (props: any) => {
     !(session && session.user) && router.push("login");
   }, [session]);
 
-    const styles = {
-      fontFamily: "Roboto",
-      display : "flex"
-    };
+  const styles = {
+    fontFamily: "Roboto",
+    display: "flex"
+  };
 
 
   //   var chart1 = new CanvasJS.Chart("chartContainer1", {
@@ -50,40 +50,44 @@ const Dashboard = (props: any) => {
   //   });
   // chart1.render();
 
-  
+
 
   return (
     <>
-      <div style={{ textAlign: "right" }}>
-        <button onClick={() => signOut()}>Sign out</button>
+      <div >
+        <button className="signoutButton" onClick={() => signOut()}>Sign out</button>
       </div>
       <div className="card">
-        <img
-          src={props.userDetails?.image}
-          alt="Avatar"
-          style={{ width: "10%" }}
-        />
-        <div className="container">
+        <div className="userImage">
+          <img
+            src={props.userDetails?.image}
+            alt="Avatar"
+            style={{ width: "10%" }}
+          />
+        </div>
+        <div className="userName">
           <h4>
             <b>{props.userDetails?.name}</b>
           </h4>
+        </div>
+        <div className="userEmail">
           <p>{props.userDetails?.email}</p>
         </div>
       </div>
       <div >
 
-      <div id="collapseOne" className="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-      <div className="panel-body">
-        <div id="chartContainer1" style={{height: "300px", width: "100%"}}>
+        <div id="collapseOne" className="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div className="panel-body">
+            <div id="chartContainer1" style={{ height: "300px", width: "100%" }}>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-      <div style={styles}>
-      <Accordion title="Click Me!" content="The Chart" />
-      <Accordion title="Click Me!" content="this is content 2" />
-      <Accordion title="Click Me!" content="this is content 3" />
-    </div>
+        <div style={styles}>
+          <Accordion title="Click Me!" content="The Chart" />
+          <Accordion title="Click Me!" content="this is content 2" />
+          <Accordion title="Click Me!" content="this is content 3" />
+        </div>
       </div>
     </>
   );
