@@ -83,10 +83,18 @@ const Dashboard = (props: any) => {
           </div>
         </div>
 
-        <div style={styles}>
-          <Accordion title="Click Me!" content="The Chart" />
-          <Accordion title="Click Me!" content="this is content 2" />
-          <Accordion title="Click Me!" content="this is content 3" />
+        <div
+          // className="accordionBtn" 
+          style={styles}>
+          <div className="accordionBtn1">
+            <Accordion title="Click Me!" content="The Chart" />
+          </div>
+          <div className="accordionBtn1">
+            <Accordion title="Click Me!" content="this is content 2" />
+          </div>
+          <div className="accordionBtn1">
+            <Accordion title="Click Me!" content="this is content 3" />
+          </div>
         </div>
       </div>
     </>

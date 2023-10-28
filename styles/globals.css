@@ -1,102 +1,153 @@
-.dashbaord{
-text-align: center;
-margin-top: 200px;
+.dashbaord {
+  text-align: center;
+  margin-top: 200px;
 }
-.headerDash{
+
+.headerDash {
   color: antiquewhite;
   font-size: 300%;
 }
 
-.signIn { 
+.signIn {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  position: relative; 
+  position: relative;
   font-size: 250%;
-  font-weight: bold; 
-  height: 250%; 
-  padding: 10px 20px; 
-  background: white; 
-  overflow: hidden; 
-  border-radius: 10px; 
-  border: 2px solid; 
-  color: #000535; 
-  z-index: 1; 
-  transition: 0.5s all ease; 
-} 
+  font-weight: bold;
+  height: 250%;
+  padding: 10px 20px;
+  background: white;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 2px solid;
+  color: #000535;
+  z-index: 1;
+  transition: 0.5s all ease;
+}
 
-.signIn:hover { 
+.signIn:hover {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: #000535; 
-  cursor: pointer; 
-  border: 0px; 
-} 
-
-.signIn:active { 
-  transform: scale(0.85); 
-} 
-
-.signIn:before { 
-  content: ""; 
-  width: 50%; 
-  height: 100%; 
-  margin: auto; 
-  position: absolute; 
-  top: 0%; 
-  left: -50%; 
-  top: -100%; 
-  background:  aqua; 
-  transition: all 0.6s ease; 
-  z-index: -1; 
-} 
-
-.signIn:hover:before { 
-  top: 0; 
-  left: 0; 
-  border: 0px; 
-  transform: rotate(180deg); 
-} 
-
-.signIn:after { 
-  content: ""; 
-  width: 50%; 
-  height: 100%; 
-  margin: auto; 
-  position: absolute; 
-  top: 0%; 
-  left: 100%; 
-  top: 100%; 
-  background:  aqua;
-  transition: all 0.6s ease; 
-  z-index: -1; 
-} 
-
-.signIn:hover:after { 
-  top: 0; 
-  left: 50%; 
-  border: 0px; 
-  transform: rotate(180deg); 
+  color: #000535;
+  cursor: pointer;
+  border: 0px;
 }
-.signoutButton{
-font-size: 20px;
-background-color: aqua;
-padding: 10px;
-border-radius: 12px;
-font-weight: bold;
-color: #000535;
+
+.signIn:active {
+  transform: scale(0.85);
 }
-.card{
+
+.signIn:before {
+  content: "";
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  left: -50%;
+  top: -100%;
+  background: aqua;
+  transition: all 0.6s ease;
+  z-index: -1;
+}
+
+.signIn:hover:before {
+  top: 0;
+  left: 0;
+  border: 0px;
+  transform: rotate(180deg);
+}
+
+.signIn:after {
+  content: "";
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  top: 100%;
+  background: aqua;
+  transition: all 0.6s ease;
+  z-index: -1;
+}
+
+.signIn:hover:after {
+  top: 0;
+  left: 50%;
+  border: 0px;
+  transform: rotate(180deg);
+}
+
+.signoutButton {
+  font-size: 20px;
+  background-color: aqua;
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #000535;
+  float: right;
+  margin-top: -70px;
+}
+
+.card {
   margin-left: 250px;
-  margin-top: 40px;
+  margin-top: 80px;
 }
-.userImage{
+
+.userImage {
   border-radius: 50%;
-border-color: aliceblue;
+  border-color: aliceblue;
 }
-.userName{
+
+.userName {
   font-size: 250%;
   color: antiquewhite;
-  
+
 }
-.userEmail{
-font-size: 250%;
-color: antiquewhite;
+
+.userEmail {
+  font-size: 250%;
+  color: antiquewhite;
+}
+
+.accordionBtn {
+  margin-top: -200px;
+  color: #000535;
+  border-color: aliceblue;
+  background-color: beige;
+  border: black;
+  border-width: 10px;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  /* padding-top: -100px; */
+}
+
+.accordianButton {
+  width: 100%;
+  position: relative;
+  text-align: left;
+  padding: 4px;
+  outline: 2px;
+  cursor: pointer;
+  background-color: beige;
+  font-size: 30px;
+  padding-bottom: 0px;
+}
+
+.accordionBtn1 {
+  width: 100%;
+  margin-top: -200px;
+  margin-bottom: 205px;
+  color: #000535;
+  border-color: aliceblue;
+  background-color: beige;
+  border: black;
+  border-width: 1px;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  /* height: 1px; */
+}
+.txt{
+  text-align: center;
 }

@@ -17,20 +17,11 @@ export default function Accordion(props: { title: string | number | boolean | Re
       }}
     >
       <button
-        style={{
-          width: "100%",
-          position: "relative",
-          textAlign: "left",
-          padding: "4px",
-          border: "none",
-          background: "transparent",
-          outline: "none",
-          cursor: "pointer"
-        }}
+       className="accordianButton"
         onClick={toggle}
         type="button"
       >
-        <p>{props.title}</p>
+        <p className="txt">{props.title}</p>
       </button>
       <div
         style={{ display: isShowing ? "block" : "none", padding: "5px" }}
