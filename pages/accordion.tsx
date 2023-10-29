@@ -21,14 +21,17 @@ export default function Accordion(props: { title: string | number | boolean | Re
         onClick={toggle}
         type="button"
       >
-        <p className="txt">{props.title}</p>
+        <p className="txt" >{props.title}</p>
       </button>
       <div
-        style={{ display: isShowing ? "block" : "none", padding: "5px" }}
-        dangerouslySetInnerHTML={{
-          __html: props.content
+        style={{
+          display: isShowing ? "block" : "none",
+          padding: "5px",
+          color: "black",
         }}
-      />
+      >
+        {props.content}
+      </div>
     </div>
   );
 }

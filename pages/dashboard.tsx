@@ -7,6 +7,7 @@ import { store } from "../store/store";
 import Types from "../store/types";
 import Accordion from "./accordion";
 import CanvasJS from "bootstrap";
+import VerticalChart from "../components/vertical-chart";
 
 const Dashboard = (props: any) => {
   const router = useRouter();
@@ -27,73 +28,46 @@ const Dashboard = (props: any) => {
   };
 
 
-  //   var chart1 = new CanvasJS.Chart("chartContainer1", {
-  //     title:{
-  //     	text:"Chart 1"
-  //     },  
-  //     data: [
-  //     {
-  //       type: "column",
-  //       dataPoints: [
-  //       { x: 10, y: 71 },
-  //       { x: 20, y: 55},
-  //       { x: 30, y: 50 },
-  //       { x: 40, y: 65 },
-  //       { x: 50, y: 95 },
-  //       { x: 60, y: 68 },
-  //       { x: 70, y: 28 },
-  //       { x: 80, y: 34 },
-  //       { x: 90, y: 14}
-  //       ]
-  //     }
-  //     ]
-  //   });
-  // chart1.render();
-
-
 
   return (
     <>
       <div >
         <button className="signoutButton" onClick={() => signOut()}>Sign out</button>
       </div>
-      <div className="card">
-        <div className="userImage">
+      <div className="card"  >
+        <div  className="userImage " >
           <img
             src={props.userDetails?.image}
             alt="Avatar"
             style={{ width: "10%" }}
           />
         </div>
-        <div className="userName">
-          <h4>
-            <b>{props.userDetails?.name}</b>
-          </h4>
-        </div>
-        <div className="userEmail">
-          <p>{props.userDetails?.email}</p>
+        <div >
+          <div className="userName">
+            <h4>
+              <b>{props.userDetails?.name}</b>
+            </h4>
+          </div>
+          <div className="userEmail">
+            <p>{props.userDetails?.email}</p>
+          </div>
         </div>
       </div>
       <div >
 
-        <div id="collapseOne" className="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-          <div className="panel-body">
-            <div id="chartContainer1" style={{ height: "300px", width: "100%" }}>
-            </div>
-          </div>
-        </div>
+
 
         <div
           // className="accordionBtn" 
           style={styles}>
           <div className="accordionBtn1">
-            <Accordion title="Click Me!" content="The Chart" />
+            <Accordion title="Chart (click here)" content={<VerticalChart />} />
+          </div>
+          <div className="accordionBtn1" style={{color:"black"}}>
+            <Accordion title="Tab 2" content="this is content 2" />
           </div>
           <div className="accordionBtn1">
-            <Accordion title="Click Me!" content="this is content 2" />
-          </div>
-          <div className="accordionBtn1">
-            <Accordion title="Click Me!" content="this is content 3" />
+            <Accordion title="Tab 3" content="this is content 3" />
           </div>
         </div>
       </div>
